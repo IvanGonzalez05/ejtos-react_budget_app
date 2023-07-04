@@ -3,7 +3,7 @@ import { AppContext } from '../context/AppContext';
 
 const Budget = () => {
     // const { budget, dispatch, expenses } = useContext(AppContext);
-    const { budget, dispatch } = useContext(AppContext);
+    const { budget, dispatch, currency } = useContext(AppContext);
     const updateBudget = (event) => {
         const value = event.target.value;
         // if(value > 20000) {
@@ -31,7 +31,7 @@ const Budget = () => {
 
     return (
         <div className='alert alert-secondary'>
-            <span>Budget: £{budget}</span>
+            <span>Budget: {currency}{budget}</span>
             <input
                 type='number'
                 step='10'
